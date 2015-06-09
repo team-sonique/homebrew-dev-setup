@@ -1,4 +1,4 @@
-class Activemq < Formula
+class Activemq510 < Formula
   desc "Apache ActiveMQ version 5.10.1"
   homepage "https://activemq.apache.org/"
   url "https://www.apache.org/dyn/closer.cgi?path=/activemq/5.10.1/apache-activemq-5.10.1-bin.tar.gz"
