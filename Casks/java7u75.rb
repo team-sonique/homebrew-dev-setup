@@ -1,15 +1,15 @@
-cask :v1 => 'java7u75' do
-  version '1.7.0_75'
-  sha256 '84e6057e1a2e00ce0df4478bdd9a04afe3e77a3ec00f52427b4a5ce7a9b18656'
+cask :v1 => 'java1.7.0_51' do
+  version '1.7.0_51'
+  sha256 'b52bcac56440e7fd0b5db9e331d31d2bd458f588b8b01e52eaf0ad2affaf9da2'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn/java/jdk/7u51-b13/jdk-7u51-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
-  homepage 'http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u75-oth-JPR'
+  homepage 'http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html'
   license :unknown
 
-  pkg 'JDK 7 Update 75.pkg'
+  pkg 'JDK 7 Update 51.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
@@ -28,9 +28,8 @@ cask :v1 => 'java7u75' do
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
-  uninstall :pkgutil => 'com.oracle.jdk7u75',
-            :delete => "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk"
-
+  uninstall :pkgutil => 'com.oracle.jdk7u51',
+            :delete => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent any packaged
     application issues.
