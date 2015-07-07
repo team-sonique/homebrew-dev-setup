@@ -1,15 +1,15 @@
-cask :v1 => 'java1.7.0_51' do
-  version '1.7.0_51'
-  sha256 'b52bcac56440e7fd0b5db9e331d31d2bd458f588b8b01e52eaf0ad2affaf9da2'
+cask :v1 => 'java8u40' do
+  version '1.8.0_40'
+  sha256 '1960617eb2fce4b503687d84d791dad72904de680c9bae006172dd9e2b5e0cd0'
 
-  url 'http://download.oracle.com/otn/java/jdk/7u51-b13/jdk-7u51-macosx-x64.dmg',
+  url 'http://download.oracle.com/otn-pub/java/jdk/8u40-b27/jdk-8u40-macosx-x64.dmg',
       :cookies => {
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
-  homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html'
+  homepage 'http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html#jdk-8u40-oth-JPR'
   license :unknown
 
-  pkg 'JDK 7 Update 51.pkg'
+  pkg 'JDK 8 Update 40.pkg'
   postflight do
     system '/usr/bin/sudo', '-E', '--',
       '/usr/libexec/PlistBuddy', '-c', 'Add :JavaVM:JVMCapabilities: string BundledApp', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Info.plist"
@@ -28,8 +28,9 @@ cask :v1 => 'java1.7.0_51' do
     system '/usr/bin/sudo', '-E', '--',
       '/bin/ln', '-nsf', '--', "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/jre/lib/server/libjvm.dylib", "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk/Contents/Home/bundle/Libraries/libserver.dylib"
   end
-  uninstall :pkgutil => 'com.oracle.jdk7u51',
-            :delete => '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK'
+  uninstall :pkgutil => 'com.oracle.jdk8u40',
+            :delete => "/Library/Java/JavaVirtualMachines/jdk#{version}.jdk"
+
   caveats <<-EOS.undent
     This Cask makes minor modifications to the JRE to prevent any packaged
     application issues.
