@@ -12,7 +12,7 @@ cask :v1 => 'teleport102' do
 
   postflight do
       system '/usr/bin/sudo', 'tccutil.py', '--insert', 'com.abyssoft.teleport'
-      system '/usr/bin/sudo', 'tccutil.py', '--enable', 'com.abyssoft.telport'
+      system '/usr/bin/sudo', 'tccutil.py', '--enable', 'com.abyssoft.teleport'
   end
 
   uninstall :script => { :executable => '/usr/local/bin/tccutil.py', :args => ['--remove', 'com.abyssoft.teleport'] },
