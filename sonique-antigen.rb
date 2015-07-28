@@ -1,4 +1,4 @@
-class Antigen < Formula
+class SoniqueAntigen < Formula
   desc "A plugin manager for zsh, inspired by oh-my-zsh and vundle."
   homepage "http://antigen.sharats.me/"
   url "https://github.com/team-sonique/antigen/archive/master.zip"
