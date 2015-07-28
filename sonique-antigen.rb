@@ -1,8 +1,8 @@
 class SoniqueAntigen < Formula
   desc "A plugin manager for zsh, inspired by oh-my-zsh and vundle."
   homepage "http://antigen.sharats.me/"
-  url "https://github.com/team-sonique/antigen/archive/master.zip"
-  sha256 "709cf77f3084919d4281c083ea415b194bcce1722029b3c6a6953cb659272e26"
+  url "https://github.com/team-sonique/antigen/archive/master.tar.gz"
+  sha256 "8ce1e05bd0f8a2a134b57bde560ba22681a7c40348cbef54cf6b92dad1464be4"
   head "https://github.com/team-sonique/antigen.git"
 
   def install
