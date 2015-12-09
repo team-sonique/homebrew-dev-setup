@@ -1,6 +1,6 @@
 cask :v1 => 'firefox-selenium' do
-  version '34.0.5'
-  sha256 'd8efa218818adf2211cad4162a515a7c2bbe4d3b9319e8eb981b5060c097fa75'
+  version '42.0'
+  sha256 '3b7cb95c658fd3ed564c5bcd9fabab641383ee0974aa6593958a5ecc2ce71cbe'
 
   url "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/#{version}/mac/en-GB/Firefox%20#{version}.dmg"
   homepage 'https://www.mozilla.org/en-GB/firefox'
