@@ -1,4 +1,4 @@
-cask :v1 => 'java8u51' do
+cask 'java8u51' do
   version '1.8.0_51'
   sha256 '85ee66d1fdce5244afcbfbfce8dc90582b8c7e3ec8ab4c21e0f4eb390af97832'
 

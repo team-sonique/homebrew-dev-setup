@@ -1,4 +1,4 @@
-cask :v1 => 'teleport102' do
+cask 'teleport102' do
   version '102'
   sha256 "ac03a6e5623d86f5577e89844503a4a3bf7e0924e4297515c7e0d1cf28f92ff2"
 
