@@ -5,7 +5,6 @@ cask 'firefox-selenium' do
   url "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/#{version}/mac/en-GB/Firefox%20#{version}.dmg"
   homepage 'https://www.mozilla.org/en-GB/firefox'
   license :mpl
-  tags :vendor => 'Mozilla'
 
   app 'Firefox.app'
 end
