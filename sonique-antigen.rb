@@ -7,8 +7,7 @@ class SoniqueAntigen < Formula
   version "1.1.2"
 
   def install
-    share.install "antigen.zsh"
-    bin.install "antigen.zsh"
+    share.install "bin/antigen.zsh"    
   end
 
   test do
