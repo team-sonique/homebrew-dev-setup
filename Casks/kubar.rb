@@ -1,5 +1,5 @@
 cask 'kubar' do
-  version '1.0'
+  version '2.0'
   sha256 'af9f484e05ed9ac6e174a72371c9ae9821f24d661189eb88326abfe23d4b9809'
 
   url "https://git.sns.sky.com/jonathan.sharifi/kubar/raw/#{version}/binary/Kubar.dmg"
