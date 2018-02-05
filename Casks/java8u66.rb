@@ -7,7 +7,6 @@ cask 'java8u66' do
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/index.html'
-  license :unknown
 
   pkg 'JDK 8 Update 66.pkg'
   postflight do
