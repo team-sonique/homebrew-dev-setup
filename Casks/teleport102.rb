@@ -5,7 +5,6 @@ cask 'teleport102' do
   url 'http://www.abyssoft.com/software/teleport/downloads/teleport102.zip'
   name 'teleport'
   homepage 'http://www.abyssoft.com/software/teleport/'
-  license :gratis
   depends_on :formula => 'tccutil'
 
   prefpane 'teleport/teleport.prefpane'
