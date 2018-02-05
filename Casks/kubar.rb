@@ -1,5 +1,5 @@
 cask 'kubar' do
-  version '2.1'
+  version '2.2'
   sha256 :no_check
 
   url "https://git.sns.sky.com/jonathan.sharifi/kubar/raw/#{version}/binary/Kubar.dmg"
