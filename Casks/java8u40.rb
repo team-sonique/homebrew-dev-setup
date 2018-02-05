@@ -7,7 +7,6 @@ cask 'java8u40' do
                     'oraclelicense' => 'accept-securebackup-cookie'
                   }
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html#jdk-8u40-oth-JPR'
-  license :unknown
 
   pkg 'JDK 8 Update 40.pkg'
   postflight do
