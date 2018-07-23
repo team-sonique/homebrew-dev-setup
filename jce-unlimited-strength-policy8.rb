@@ -30,7 +30,7 @@ cask 'jce-unlimited-strength-policy8' do
     end
   end
 
-  caveats <<-EOS
+  caveats <<~EOS
     Installing this Cask means you have AGREED to the Oracle Binary Code License Agreement for Java SE at
       http://www.oracle.com/technetwork/java/javase/terms/license/index.html
   EOS
