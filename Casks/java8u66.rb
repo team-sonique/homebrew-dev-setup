@@ -2,10 +2,7 @@ cask 'java8u66' do
   version '1.8.0_66'
   sha256 'cd416de4f41f9f0a6984c456481437681674a717da62259740c54732f174fa08'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-macosx-x64.dmg',
-      :cookies => {
-                    'oraclelicense' => 'accept-securebackup-cookie'
-                  }
+  url 'https://github.com/team-sonique/homebrew-dev-setup/releases/download/v1.0/jdk-8u66-macosx-x64.dmg'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/index.html'
 
   pkg 'JDK 8 Update 66.pkg'
