@@ -1,7 +1,7 @@
 class Activemq510 < Formula
   desc "Apache ActiveMQ version 5.10.1"
   homepage "https://activemq.apache.org/"
-  url "https://www.apache.org/dyn/closer.cgi?path=/activemq/5.10.1/apache-activemq-5.10.1-bin.tar.gz"
+  url "http://archive.apache.org/dist/activemq/5.10.1/apache-activemq-5.10.1-bin.tar.gz"
   sha256 "48193c0f2b8e126f9b386829d293e189287e8fe355f1bedc389150ce3e0fda68"
 
   depends_on :java => "1.6+"
@@ -15,7 +15,7 @@ class Activemq510 < Formula
 
   plist_options :manual => "activemq start"
 
-  def plist; <<-EOS.undent
+  def plist; <<-EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
     "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
