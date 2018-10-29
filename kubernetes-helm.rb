@@ -7,6 +7,7 @@ class KubernetesHelm < Formula
   head "https://github.com/kubernetes/helm.git"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any_skip_relocation
     sha256 "ba6cd1ad800a7c27673c049a64317205a7efdf697ef05bdca9b2c05462774c19" => :high_sierra
     sha256 "3d2bcc34ce4f4abfa6a2eca7dd0082383f4bc7ca06178b976f1d231998c4e506" => :sierra
