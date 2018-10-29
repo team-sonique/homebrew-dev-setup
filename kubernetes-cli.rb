@@ -7,6 +7,7 @@ class KubernetesCli < Formula
   head "https://github.com/kubernetes/kubernetes.git"
 
   bottle do
+    root_url: https://homebrew.bintray.com/bottles
     cellar :any_skip_relocation
     sha256 "f71ea25c336b563e835cff8d91b247f273e78b710e1c6c176c72cc841f0067c5" => :high_sierra
     sha256 "1ee746bba492acb1c75acfd523aa1d9dac08d5d89871adaddc49ccf7060d668a" => :sierra
