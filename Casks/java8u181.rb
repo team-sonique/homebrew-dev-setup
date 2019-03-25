@@ -3,6 +3,7 @@ cask 'java8u181' do
   version '1.8.0_181'
   sha256 '3ea78e0107f855b47a55414fadaabd04b94e406050d615663d54200ec85efc9b'
 
+  java_update = version.sub(%r{.*_(\d+)$}, '\1')
   url 'https://github.com/team-sonique/homebrew-dev-setup/releases/download/2.0/jdk-8u181-macosx-x64.dmg'
   name 'Java Standard Edition Development Kit'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/index.html'
