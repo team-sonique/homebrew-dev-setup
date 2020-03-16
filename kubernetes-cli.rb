@@ -10,7 +10,7 @@ class KubernetesCli < Formula
     root_url "https://homebrew.bintray.com/bottles"
     cellar :any_skip_relocation
     sha256 "0ffd9ee9bb5026ae526a09fe50591a94a1a987f52c5866e32aefb79b533f6e10" => :catalina
-    sha256 "12b5954c175d44077679d95d96497038f800dc2b9b836f1068d8446f4536f026" => :mojave
+    sha256 "b8999e5c544b70b0223952fd92eda08eff8035762dae2a27c31aaca24fed51c0" => :mojave
   end
 
   depends_on "go@1.12" => :build
