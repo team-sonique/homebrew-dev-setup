@@ -2,7 +2,7 @@ class Activemq511 < Formula
   desc "Apache ActiveMQ version 5.11.4"
   homepage "https://activemq.apache.org/"
   url "http://archive.apache.org/dist/activemq/5.11.4/apache-activemq-5.11.4-bin.tar.gz"
-  sha256 "b2076bca6964371a41c420b0db047d027ab81617"
+  sha256 "a5af416775ffa40ef2b181e05011d8007494173475e62b2e3175b685098e5b29"
 
   depends_on :java => "1.6+"
 
