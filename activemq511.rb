@@ -4,8 +4,6 @@ class Activemq511 < Formula
   url "http://archive.apache.org/dist/activemq/5.11.4/apache-activemq-5.11.4-bin.tar.gz"
   sha256 "a5af416775ffa40ef2b181e05011d8007494173475e62b2e3175b685098e5b29"
 
-  depends_on :openjdk => "1.6+"
-
   def install
     rm_rf Dir["bin/linux-x86-*"]
     libexec.install Dir["*"]
