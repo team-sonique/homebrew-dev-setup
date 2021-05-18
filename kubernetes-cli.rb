@@ -2,15 +2,14 @@ class KubernetesCli < Formula
   desc "Kubernetes command-line interface"
   homepage "https://kubernetes.io/"
   url "https://github.com/kubernetes/kubernetes.git",
-      :tag      => "v1.16.3",
-      :revision => "b3cbbae08ec52a7fc73d334838e18d17e8512749"
+      tag:      "v1.16.3",
+      revision: "b3cbbae08ec52a7fc73d334838e18d17e8512749"
   head "https://github.com/kubernetes/kubernetes.git"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles"
-    cellar :any_skip_relocation
-    sha256 "0ffd9ee9bb5026ae526a09fe50591a94a1a987f52c5866e32aefb79b533f6e10" => :catalina
-    sha256 "b8999e5c544b70b0223952fd92eda08eff8035762dae2a27c31aaca24fed51c0" => :mojave
+    sha256 cellar: :any_skip_relocation, catalina: "0ffd9ee9bb5026ae526a09fe50591a94a1a987f52c5866e32aefb79b533f6e10"
+    sha256 cellar: :any_skip_relocation, mojave:   "b8999e5c544b70b0223952fd92eda08eff8035762dae2a27c31aaca24fed51c0"
   end
 
   depends_on "go@1.12" => :build
@@ -30,11 +29,11 @@ class KubernetesCli < Formula
       bin.install "_output/local/bin/darwin/amd64/kubectl"
 
       # Install bash completion
-      output = Utils.popen_read("#{bin}/kubectl completion bash")
+      output = Utils.safe_popen_read("#{bin}/kubectl", "completion", "bash")
       (bash_completion/"kubectl").write output
 
       # Install zsh completion
-      output = Utils.popen_read("#{bin}/kubectl completion zsh")
+      output = Utils.safe_popen_read("#{bin}/kubectl", "completion", "zsh")
       (zsh_completion/"_kubectl").write output
 
       prefix.install_metafiles
